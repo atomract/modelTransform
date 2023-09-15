@@ -42,7 +42,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
       '/heli.obj',
       (heli) => {
         heli.position.x = 10
-        heli.position.y = -2
+        heli.position.y = 0
         heliObj = heli
           scene.add(heli)
       },
@@ -71,7 +71,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
       side: THREE.DoubleSide
     });
     var planeMesh = new THREE.Mesh(planeGeometry, planeMaterial);
-    planeMesh.position.set(0, -0., 0);
+    planeMesh.position.set(0, -0.35, 0);
     planeMesh.rotation.set(0, 0, 0);
     planeMesh.rotation.x = de2ra(90);
     planeMesh.receiveShadow = true;
