@@ -150,29 +150,29 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
     var f2 = gui.addFolder('Position');
     f2.add(controller, 'positionX', -5, 5).onChange( function() {
        object.position.x = (controller.positionX);
-       heliObj.position.x = (controller.positionX);
+       heliObj.position.x = (controller.positionX+10);
     });
-    f2.add(controller, 'positionY', -3, 5).onChange( function() {
+    f2.add(controller, 'positionY', -5, 5).onChange( function() {
        object.position.y = (controller.positionY);
-       heli.position.y = (controller.positionY);
+       heliObj.position.y = (controller.positionY+0);
     });
     f2.add(controller, 'positionZ', -5, 5).onChange( function() {
        object.position.z = (controller.positionZ);
-       heli.position.z = (controller.positionZ);
+       heliObj.position.z = (controller.positionZ+0);
     });
 
     var f3 = gui.addFolder('Rotation');
     f3.add(controller, 'rotationX', -180, 180).onChange( function() {
        object.rotation.x = de2ra(controller.rotationX);
-       heli.rotation.x = de2ra(controller.rotationX);
+       heliObj.rotation.x = de2ra(controller.rotationX);
     });
     f3.add(controller, 'rotationY', -180, 180).onChange( function() {
        object.rotation.y = de2ra(controller.rotationY);
-       heli.rotation.y = de2ra(controller.rotationY);
+       heliObj.rotation.y = de2ra(controller.rotationY);
     });
     f3.add(controller, 'rotationZ', -180, 180).onChange( function() {
        object.rotation.z = de2ra(controller.rotationZ);
-       heli.rotation.z = de2ra(controller.rotationZ);
+       heliObj.rotation.z = de2ra(controller.rotationZ);
     });
   }
 
