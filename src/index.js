@@ -41,7 +41,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
     objLoader.load(
       '/heli.obj',
       (heli) => {
-        heli.position.x = 10
+        heli.position.x = 14
         heli.position.y = 0
         heliObj = heli
           scene.add(heli)
@@ -64,7 +64,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
     camera.lookAt(scene.position);
     scene.add(camera);
 
-    var planeGeometry = new THREE.BoxGeometry( 50, 50, 0.1 );
+    var planeGeometry = new THREE.BoxGeometry( 100, 100, 0.1 );
     var planeMaterial = new THREE.MeshLambertMaterial({
       color: 0x7393B3,
       ambient: 0x000000,
@@ -150,7 +150,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
     var f2 = gui.addFolder('Position');
     f2.add(controller, 'positionX', -5, 5).onChange( function() {
        object.position.x = (controller.positionX);
-       heliObj.position.x = (controller.positionX+10);
+       heliObj.position.x = (controller.positionX+14);
     });
     f2.add(controller, 'positionY', -5, 5).onChange( function() {
        object.position.y = (controller.positionY);
